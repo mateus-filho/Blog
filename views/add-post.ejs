@@ -1,0 +1,29 @@
+<%- include ('includes/head.ejs')%>
+
+    <div class="header-addpost">
+        <h1>Adicionar novo post</h1>
+    </div>
+
+    <form action="/posts/add" method="post" enctype="multipart/form-d">
+        <div class="form-image">
+           
+            <label for="image">Adicionar imagem</label>
+            <input type="file" name="image" id="image">
+        </div>
+
+        <div class="form-body">   
+
+            <label for="title">Título</label>
+            <input type="text" name="title">
+            
+            <label for="text">Texto:</label>
+            <textarea name="text" cols="30" rows="10"></textarea>
+            
+            <button type="submit" name="addsubmit" class="submitButton">Adicionar </button>
+        </div>
+    </form>
+            
+        
+        
+        
+        <%- include('includes/footer.ejs') %>  

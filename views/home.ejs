@@ -1,0 +1,21 @@
+<%- include ('includes/head.ejs')%>
+      <div class="new-post">
+        <a href="/posts/add">Criar Post</a>
+      </div>  
+ 
+      <div class="pagina-inicial">
+          <h1>Página Inicial</h1>
+      </div>
+      <div class="container">
+        <% if (posts.length > 0){%>
+            <% for (let post of posts){%>
+                <div class="blog-post">
+                  
+                  <h3><a href="/posts/<%= post.id %>"><%= post.title%></a></h3>
+                </div>
+        <% }}%> 
+
+      </div>
+    
+
+  <%- include('includes/footer.ejs') %>    

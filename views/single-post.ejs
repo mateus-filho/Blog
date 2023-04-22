@@ -1,0 +1,15 @@
+<%- include ('includes/head.ejs')%>
+
+    <div class="header-post">
+        <h1><%= post.title %></h1>
+        <small><%= post.createdAt.toLocaleDateString()  %></small>
+    </div>
+    
+    <img class="post-img" src="/images/<%= post.imgUrl %>" alt="imgpost">
+    
+    <div class="text">
+        <p><%= post.text %></p>
+    </div>
+    
+
+<%- include('includes/footer.ejs') %>  
